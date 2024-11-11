@@ -1,8 +1,8 @@
 import {
-    mobile,
-    backend,
-    creator,
-    web,
+    about1,
+    about2,
+    about3,
+    about4,
     javascript,
     typescript,
     html,
@@ -15,10 +15,8 @@ import {
     git,
     figma,
     docker,
-    meta,
-    starbucks,
-    tesla,
-    shopify,
+    fcpo,
+    cro,
     carrent,
     jobit,
     tripguide,
@@ -37,25 +35,33 @@ import {
     {
       id: "contact",
       title: "Contact",
+    },{
+      id: "work",
+      title: "Work",
     },
+    {
+      id: "contact",
+      title: "Contact",
+    },
+
   ];
   
   const services = [
     {
-      title: "Web Developer",
-      icon: web,
+      title: "Web Application Development",
+      icon: about1,
     },
     {
-      title: "React Native Developer",
-      icon: mobile,
+      title: "UI/UX Design and Prototyping",
+      icon: about2,
     },
     {
-      title: "Backend Developer",
-      icon: backend,
+      title: "Custom E-Commerce Solutions",
+      icon: about3,
     },
     {
-      title: "Content Creator",
-      icon: creator,
+      title: "Front-End Optimization & Performance Tuning",
+      icon: about4,
     },
   ];
   
@@ -116,55 +122,29 @@ import {
   
   const experiences = [
     {
-      title: "React.js Developer",
-      company_name: "Starbucks",
-      icon: starbucks,
-      iconBg: "#383E56",
-      date: "March 2020 - April 2021",
+      title: "Full-stack Developer Intern",
+      company_name: "FCPO",
+      icon: fcpo,
+      date: "March 2024 - September 2024",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Developed a comprehensive eCommerce dashboard using React.js, focusing on user experience and responsive design.",
+        "Integrated features for managing eCommerce data, including sales analytics, inventory management, and user interactions.",
+        "Employed best practices in React to ensure efficient code structure and maintainable components.",
+        "Utilized data visualization tools to display sales and inventory metrics through interactive graphs and tables.",
+        "Collaborated with the development team to deploy the dashboard for a live eCommerce website, ensuring seamless user management and data flow.",
       ],
     },
     {
-      title: "React Native Developer",
-      company_name: "Tesla",
-      icon: tesla,
-      iconBg: "#E6DEDD",
+      title: "Front-End Developer Intern",
+      company_name: "CRO",
+      icon: cro,
       date: "Jan 2021 - Feb 2022",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
-      ],
-    },
-    {
-      title: "Web Developer",
-      company_name: "Shopify",
-      icon: shopify,
-      iconBg: "#383E56",
-      date: "Jan 2022 - Jan 2023",
-      points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
-      ],
-    },
-    {
-      title: "Full stack Developer",
-      company_name: "Meta",
-      icon: meta,
-      iconBg: "#E6DEDD",
-      date: "Jan 2023 - Present",
-      points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Developed a file management web app for associations and cooperatives using React.js, Node.js, and Bootstrap.",
+        "Allowed users to upload and organize documents online, removing the need for manual submission and improving workflow efficiency.",
+        "Incorporated filtering and authorization features to streamline the file access process and improve user experience.",
+        "Collaborated closely with the back-end team to ensure integration between front-end and back-end systems, achieving smooth functionality for users.",
+        "Assisted in supervising the implementation of additional front-end features, ensuring alignment with project requirements and deadlines."
       ],
     },
   ];
