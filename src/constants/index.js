@@ -168,7 +168,7 @@ const testimonials = [
     image: profMellah,
   },
   {
-    testimonial: "I am confident that the skills and experiences I bring, coupled with my commitment to personal and professional growth, will allow me to excel in any role or opportunity I am given. I look forward to the opportunity to contribute and continue learning, making a positive impact in the field.",
+    testimonial: "I have had the privilege of working closely with Nabil, and I can confidently say that he possesses the necessary skills, experience, and dedication to excel in any professional opportunity. Throughout his academic journey, he consistently demonstrated a strong work ethic, a commitment to personal growth, and a passion for his field. Nabil’s ability to adapt, learn, and contribute meaningfully makes him well-equipped to succeed and make a lasting impact in his career. It is without hesitation that I recommend him for any future endeavors, knowing he will continue to achieve great things.",
     name: "Mohammed Ghaouth Belkasmi",
     designation: "Assistant Professor",
     company: "the National School of Applied Sciences of Oujda",
