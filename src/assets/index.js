@@ -17,6 +17,8 @@ import mongodb from "./tech/mongodb.png";
 import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
+import php from "./tech/php.png"
+import bootstrap from "./tech/bootstrap.png"
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
@@ -24,11 +26,19 @@ import threejs from "./tech/threejs.svg";
 import fcpo from "./company/fcpo.png";
 import cro from "./company/cro.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import profNone from "./prof/pers_none.png";
+import profBelkasmi from "./prof/prof_Belkasmi.png";
+import profBougroun from "./prof/prof_Bougroun.png";
+import profMellah from './prof/prof_Mellah.png';
+
+
+import project1_Dashboard from "./project_dashboard.png";
 
 export {
+  profNone,
+  profBelkasmi,
+  profBougroun,
+  profMellah,
   logo,
   about3,
   about4,
@@ -47,12 +57,14 @@ export {
   nodejs,
   reactjs,
   redux,
+  php,
   tailwind,
   typescript,
+  bootstrap,
   threejs,
   fcpo,
   cro,
-  carrent,
-  jobit,
-  tripguide,
+
+
+  project1_Dashboard
 };
