@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
@@ -21,43 +21,35 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          {/* Logo with responsive size */}
+          {/* Logo */}
           <img
             src={logo}
             alt="logo"
-            className="w-32 h-8 sm:w-40 sm:h-10 object-contain" // Adjust logo size here
+            className="w-48 h-12 sm:w-56 sm:h-14 object-contain transform scale-125"
           />
-          {/* Text with smaller size for mobile */}
           <p className="text-white text-sm sm:text-[16px] font-bold cursor-pointer flex">
             Nabil Lambattan&nbsp;
             <span className="sm:block hidden">|&nbsp;Front End Developer</span>
           </p>
         </Link>
 
-        {/* Desktop navigation links */}
-        <ul className="list-none hidden md:flex flex-row gap-10">
+        {/* Desktop Navigation Links */}
+        <ul className="list-none hidden xl:flex flex-row gap-10">
           {navLinks.map((link) => (
             <li
               key={link.id}
               className={`${
                 active === link.title ? "text-white" : "text-secondary"
-              }hover:text-white text-[18px] font-medium cursor-pointer`}
+              } hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(link.title)}
             >
-              <a
-                href={`#${link.id}`}
-                className={`${
-                  active === link.title ? "text-white" : "text-secondary"
-                } hover:text-white text-[18px] font-medium cursor-pointer`}
-              >
-                {link.title}
-              </a>
+              <a href={`#${link.id}`}>{link.title}</a>
             </li>
           ))}
         </ul>
 
         {/* Mobile Menu */}
-        <div className="md:hidden flex flex-1 justify-end items-center">
+        <div className="xl:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}
             alt="menu"
@@ -75,20 +67,13 @@ const Navbar = () => {
                   key={link.id}
                   className={`${
                     active === link.title ? "text-white" : "text-secondary"
-                  }font-poppins text-[16px] font-medium cursor-pointer`}
+                  } font-poppins text-[16px] font-medium cursor-pointer`}
                   onClick={() => {
                     setToggle(!toggle);
                     setActive(link.title);
                   }}
                 >
-                  <a
-                    href={`#${link.id}`}
-                    className={`${
-                      active === link.title ? "text-white" : "text-secondary"
-                    } hover:text-white text-[18px] font-medium cursor-pointer`}
-                  >
-                    {link.title}
-                  </a>
+                  <a href={`#${link.id}`}>{link.title}</a>
                 </li>
               ))}
             </ul>

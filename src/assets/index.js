@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+import logo from "./logo.png";
 import about3 from "./about3.png";
 import about4 from "./about4.png";
 import about2 from "./about2.png";
