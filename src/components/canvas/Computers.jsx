@@ -4,7 +4,23 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
-  const { scene } = useGLTF("./desktop_pc/scene.gltf");
+  const { scene, nodes, materials } = useGLTF("./desktop_pc/scene.gltf");
+
+  // Validate the geometry before rendering
+  useEffect(() => {
+    if (scene) {
+      scene.traverse((child) => {
+        if (child.isMesh && child.geometry) {
+          const positions = child.geometry.attributes.position.array;
+          // Check if there are NaN values in the positions
+          if (positions.some((value) => isNaN(value))) {
+            console.error("Mesh contains NaN values in positions");
+          }
+        }
+      });
+    }
+  }, [scene]);
+
   return (
     <mesh>
       <ambientLight intensity={0.5} />

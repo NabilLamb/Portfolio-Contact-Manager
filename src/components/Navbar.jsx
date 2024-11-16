@@ -25,11 +25,11 @@ const Navbar = () => {
           <img
             src={logo}
             alt="logo"
-            className="w-48 h-12 sm:w-56 sm:h-14 object-contain transform scale-125"
+            className="w-32 h-8 sm:w-40 sm:h-10 object-contain"
           />
           <p className="text-white text-sm sm:text-[16px] font-bold cursor-pointer flex">
             Nabil Lambattan&nbsp;
-            <span className="sm:block hidden">|&nbsp;Front End Developer</span>
+            <span className="sm:block hidden">|&nbsp;Software Engineering</span>
           </p>
         </Link>
 
