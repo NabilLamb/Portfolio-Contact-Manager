@@ -1,67 +1,77 @@
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
+
 import { motion } from "framer-motion";
-import "react-vertical-timeline-component/style.min.css";
 import { styles } from "../styles";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
-import { textVariant } from "../utils/motion";
+import { textVariant, fadeIn } from "../utils/motion";
 
-const ExperienceCard = ({ experience }) => (
-  <VerticalTimelineElement
-    contentStyle={{ background: "#1d1836", color: "#fff" }}
-    contentArrowStyle={{ borderRight: "7px solid  #232631" }}
-    date={experience.date}
-    iconStyle={{ background: "#fff" }}
-    icon={
-      <div className="flex justify-center items-center w-full h-full ">
+const ExperienceCard = ({ experience, index }) => (
+  <motion.div
+    variants={fadeIn("right", "spring", index * 0.5, 0.75)}
+    className="bg-tertiary p-6 rounded-2xl border-l-4 border-[#915eff] shadow-lg"
+  >
+    <div className="flex items-start">
+      <div className="mr-4">
         <img
           src={experience.icon}
           alt={experience.company_name}
-          className="w-[60%] h-[60%] object-contain"
+          className="w-16 h-16 object-contain"
         />
       </div>
-    }
-  >
-    <div>
-      <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
-      <p
-        className="text-secondary text-[16px] font-semibold"
-        style={{ margin: 0 }}
-      >
-        {experience.company_name}
-      </p>
-      {/* <p>{experience.description}</p>
-      <p>{experience.duration}</p> */}
+      
+      <div className="flex-1">
+        <h3 className="text-white text-[22px] font-bold">{experience.title}</h3>
+        <div className="flex justify-between flex-wrap">
+          <p className="text-secondary text-[18px] font-semibold">
+            {experience.company_name}
+          </p>
+          <p className="text-gray-400 text-[16px]">{experience.date}</p>
+        </div>
+        
+        <ul className="mt-5 space-y-3">
+          {experience.points.map((point, index) => (
+            <li 
+              key={`exp-point-${index}`}
+              className="text-white-100 text-[16px] pl-3 relative before:content-['▹'] before:absolute before:left-0 before:text-[#915eff]"
+            >
+              {point}
+            </li>
+          ))}
+        </ul>
+        
+        <div className="mt-6 flex flex-wrap gap-2">
+          {experience.tech?.map((technology, techIndex) => (
+            <span 
+              key={techIndex}
+              className="text-xs px-3 py-1 bg-[#1d1836] rounded-full text-[#915eff] border border-[#915eff]/30"
+            >
+              {technology}
+            </span>
+          ))}
+        </div>
+      </div>
     </div>
-
-    <ul className="mt-5 list-disc ml-5 space-y-2">
-      {experience.points.map((point, index) => (
-        <li
-          key={`exp-point-${index}`}
-          className="text-white-100 text-[14px] pl-1 tracking-wider"
-        >
-          {point}
-        </li>
-      ))}
-    </ul>
-  </VerticalTimelineElement>
+  </motion.div>
 );
+
 const Experience = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>What I have done so far</p>
-        <h2 className={styles.sectionHeadText}>Work Experience.</h2>
+        <p className={styles.sectionSubText}>Career Journey</p>
+        <h2 className={styles.sectionHeadText}>Professional Experience.</h2>
       </motion.div>
-      <div className="mt-20 flex flex-col">
-        <VerticalTimeline>
+      
+      <div className="mt-20">
+        <div className="space-y-16">
           {experiences.map((experience, index) => (
-            <ExperienceCard key={index} experience={experience} />
+            <ExperienceCard 
+              key={`experience-${index}`} 
+              index={index} 
+              experience={experience} 
+            />
           ))}
-        </VerticalTimeline>
+        </div>
       </div>
     </>
   );

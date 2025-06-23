@@ -1,3 +1,4 @@
+// src/App.jsx
 import { BrowserRouter } from "react-router-dom";
 import {
   About,
@@ -9,13 +10,14 @@ import {
   Tech,
   Works,
   StarsCanvas,
+  Footer
 } from "./components";
 
 const App = () => {
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-primary">
-        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+        <div className="bg-gradient-to-br from-[#0a192f] via-[#0d1b33] to-[#112240]">
           <Navbar />
           <Hero />
         </div>
@@ -28,6 +30,7 @@ const App = () => {
           <Contact />
           <StarsCanvas />
         </div>
+        <Footer />
       </div>
     </BrowserRouter>
   );
